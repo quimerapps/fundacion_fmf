@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListarAsistencia" language="groovy" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="556" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="7c9396fa-dd83-41d7-91b4-e8e9abfba16a">
+	<property name="ireport.zoom" value="1.331000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="variable" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tema" class="java.lang.Object"/>
+	<parameter name="cursoCompleto" class="java.lang.Object"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="horas" class="java.lang.String"/>
+	<parameter name="logo_f" class="java.lang.String"/>
+	<field name="valor" class="java.lang.Object"/>
+	<pageHeader>
+		<band height="112" splitType="Stretch">
+			<image onErrorType="Blank">
+				<reportElement uuid="03c82b25-c878-453e-967c-7c02077c7e3a" x="310" y="0" width="114" height="88"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="5bbd2ea8-d656-4579-b1bf-307a87811466" x="6" y="0" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91252032-f369-4046-865a-1a7c98abf1e2" x="6" y="15" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CURSO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3278f6db-c02c-4760-bc1e-f2cef53f449f" x="6" y="30" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEMA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c92a3fd3-12e3-4a75-b10d-bd50930a599e" x="6" y="45" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROYECTO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5e2894e0-1e2c-404c-af30-892387e57daf" x="6" y="58" width="117" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LINEA ESTRATÉGICA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0abf3aa7-7934-4bec-8d94-94225d515d80" x="6" y="73" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FINANCIADOR:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="22b6bed3-b40b-4d5d-a5b7-51216640c40e" x="109" y="0" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c8ef05cf-a085-45a9-b31f-83a5db39c5e4" x="109" y="15" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{cursoCompleto}[1]]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f9f96438-4581-47cb-a0b8-2fcc72e38f9d" x="109" y="30" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{tema}[1]]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="19c23925-cfc7-45da-bce6-2adc2bb4a6e3" x="109" y="45" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{cursoCompleto}[3]]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="50163816-6c56-4572-88fd-0df9138e6122" x="109" y="58" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{cursoCompleto}[4]]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c50e5d01-394a-4451-b86a-82c204a43610" x="109" y="73" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{cursoCompleto}[5]]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0abf3aa7-7934-4bec-8d94-94225d515d80" x="7" y="88" width="100" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORAS:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c50e5d01-394a-4451-b86a-82c204a43610" x="109" y="88" width="194" height="15"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{horas}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement uuid="03c82b25-c878-453e-967c-7c02077c7e3a" x="431" y="6" width="98" height="73"/>
+				<imageExpression><![CDATA[$P{logo_f}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<line>
+				<reportElement uuid="6ca7d4cc-8ccc-4950-b66b-ec42aca346c2" x="0" y="12" width="556" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d1749516-76f4-4607-bb2b-d4cae7bff12f" x="0" y="33" width="556" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="f3982a43-36c6-49c7-809a-a66e24f64062" x="0" y="14" width="34" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="53ab4153-1513-450e-a3cf-f95b3645838f" x="34" y="14" width="105" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bebe876d-78d1-401d-97ea-843ededa968d" x="139" y="14" width="164" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mujer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f83c6565-8a96-4b3c-bcd7-f0c9779727e9" x="393" y="14" width="163" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="024e6d50-3e34-41ce-be11-fc256248aad5" x="200" y="0" width="140" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Formato de asistencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f83c6565-8a96-4b3c-bcd7-f0c9779727e9" x="303" y="14" width="90" height="15"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inscrita]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement uuid="fc823519-89a5-4d8f-ab58-2bb684b0fea0" x="0" y="4" width="21" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fc823519-89a5-4d8f-ab58-2bb684b0fea0" x="34" y="4" width="105" height="15"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{valor}[5]]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fc823519-89a5-4d8f-ab58-2bb684b0fea0" x="139" y="4" width="164" height="15"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{valor}[1]+" "+$F{valor}[2]+" "+$F{valor}[3] + " " + $F{valor}[4]]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="e5bb988e-39e3-4bb8-a6fa-8bd65a6b5086" x="399" y="17" width="157" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="fc823519-89a5-4d8f-ab58-2bb684b0fea0" x="303" y="3" width="90" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( $F{valor}[9].equals("S")? "SI" : "NO" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54">
+			<staticText>
+				<reportElement uuid="99bfc87a-722a-4a86-8ba8-4f1f9bdf68c1" x="169" y="3" width="219" height="35"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Contacto: direccion@mujeryfuturo.org
+Teléfonos: (+57-7)6341589 - (+57)3105765181]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1f89eb67-317a-4071-a318-d4019c490739" x="205" y="30" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pag. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="f6d91619-ff76-4a9a-8e2e-9af6d0775396" x="285" y="30" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
