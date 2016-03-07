@@ -91,7 +91,7 @@
 				<td align="left" bgcolor="#FFFFFF" valign="middle" colspan="2">
 				Horas:<select name="horas<%=j %>">
 				<%
-				for(int i=0; i<=24; i++){
+				for(int i=0; i<=200; i++){
 					%>
 					<option value="<%=i%>"><%=i%></option>
 					<%
